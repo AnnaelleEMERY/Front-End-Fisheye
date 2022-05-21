@@ -1,0 +1,144 @@
+#contact_modal {
+    display: none;
+}
+
+.photograph-header {
+    background-color: $headerColor;
+    height: 300px;
+    margin: 0 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    padding: 0rem 2rem;
+
+    .profile-pic {
+        border-radius: 100px;
+    }
+}
+
+.photograph-main {
+    margin: 20px 100px;
+}
+
+.contact_button {
+    font-size: 15px;
+    font-weight: bold;
+    color: $white;
+    padding: 11px;
+    width: 140px;
+    height: 56px;
+    border: none;
+    background-color: $primaryColor;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal {
+    border-radius: 5px;
+    background-color: #db8876;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+    margin: auto;
+
+    header {
+        justify-content: space-between;
+        width: 100%;
+
+        img {
+            cursor: pointer;
+        }
+
+        h2 {
+            font-size: 5.8rem;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: self-start;
+                margin-bottom: 26px;
+            }
+
+            input {
+                width: 100%;
+                height: 68px;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.dropdown {
+    margin-bottom: 4rem;
+
+    label {
+        margin-right: 2rem;
+
+        font-weight: 600;
+    }
+
+    select {
+        font-size: 15px;
+        font-weight: bold;
+        color: $white;
+        padding: 11px;
+        width: 140px;
+        height: 56px;
+        border: none;
+        background-color: $primaryColor;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.allPhotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 10px;
+
+    .onePhoto {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    p {
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        color: $primaryColor;
+    }
+
+    i {
+        color: $primaryColor;
+    }
+}
+
+.divTitleLikes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .likesNbr {
+        margin-left: auto;
+    }
+}
