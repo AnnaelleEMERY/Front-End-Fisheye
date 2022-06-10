@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url("photographer.css");
-* {
+*,
+::before,
+::after {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   word-break: keep-all;
@@ -9,10 +11,17 @@
   -webkit-hyphens: none;
   hyphens: none;
   outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
+:root {
+  font-size: 10px;
+}
+
+main {
+  padding: 0 10rem;
 }
 
 body {
@@ -25,21 +34,31 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  height: 9rem;
+}
+header h1 {
+  color: #901c1c;
+  font-weight: 500;
+  font-size: 3.6rem;
+  margin-right: 10rem;
 }
 
+.h1,
 h1 {
-  color: #d3573c;
-}
-
-.h1 {
   font-size: 3.5rem;
   font-weight: 500;
 }
 
-.h2 {
-  color: #901c1c;
+.h2,
+h2 {
+  color: #d3573c;
   font-size: 2rem;
+}
+
+.h3,
+h3 {
+  color: #901c1c;
+  font-size: 1.8rem;
 }
 
 p {
@@ -55,8 +74,8 @@ img {
 }
 
 .logo {
-  height: 50px;
-  margin-left: 100px;
+  height: 5rem;
+  margin-left: 10rem;
 }
 
 .photographer_section {
@@ -65,7 +84,6 @@ img {
   gap: 70px;
   margin-top: 100px;
 }
-
 .photographer_section article {
   justify-self: center;
   display: flex;
@@ -73,12 +91,24 @@ img {
   align-items: center;
   flex-direction: column;
 }
-
 .photographer_section article h2 {
   color: #d3573c;
-  font-size: 36px;
+  font-size: 3.6rem;
+  text-align: center;
+  font-weight: 700;
 }
-
+.photographer_section article h1,
+.photographer_section article h3,
+.photographer_section article p {
+  text-align: center;
+}
+.photographer_section article .price {
+  color: #757575;
+}
+.photographer_section article .price,
+.photographer_section article .tag {
+  margin-top: 0.5rem;
+}
 .photographer_section article img {
   height: 200px;
   width: 200px;
@@ -101,7 +131,6 @@ img {
 .photograph-header {
   background-color: #fafafa;
   height: 300px;
-  margin: 0 100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
@@ -113,10 +142,13 @@ img {
 }
 .photograph-header .profile-pic {
   border-radius: 100px;
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
 }
 
 .photograph-main {
-  margin: 20px 100px;
+  margin-top: 20px;
 }
 
 .contact_button {
@@ -198,13 +230,18 @@ img {
 .allPhotos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 40px;
-  grid-row-gap: 10px;
+  grid-gap: 40px;
 }
 .allPhotos .onePhoto {
   width: 100%;
-  height: auto;
+  height: 25vw;
   border-radius: 5px;
+}
+.allPhotos .onePhoto img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 90%;
 }
 .allPhotos p {
   margin-top: 1.5rem;

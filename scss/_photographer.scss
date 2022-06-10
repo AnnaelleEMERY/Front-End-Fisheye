@@ -5,7 +5,6 @@
 .photograph-header {
     background-color: $headerColor;
     height: 300px;
-    margin: 0 100px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -17,11 +16,14 @@
 
     .profile-pic {
         border-radius: 100px;
+        width: 20rem;
+        height: 20rem;
+        object-fit: cover;
     }
 }
 
 .photograph-main {
-    margin: 20px 100px;
+    margin-top: 20px;
 }
 
 .contact_button {
@@ -112,13 +114,19 @@
 .allPhotos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 40px;
-    grid-row-gap: 10px;
+    grid-gap: 40px;
 
     .onePhoto {
         width: 100%;
-        height: auto;
+        height: 25vw;
         border-radius: 5px;
+
+        img {
+            object-fit: cover;
+            display: block;
+            width: 100%;
+            height: 90%;
+        }
     }
 
     p {
