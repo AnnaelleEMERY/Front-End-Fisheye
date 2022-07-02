@@ -1,0 +1,42 @@
+@use '../base/' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: color(primary) solid 2px;
+        border-radius: .25rem;
+    }
+}
+
+nav {
+    position: relative;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: color(dark);
+    display: block;
+}
+
+fieldset {
+    min-width: auto;
+}
+
+.screenreader-only {
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+}

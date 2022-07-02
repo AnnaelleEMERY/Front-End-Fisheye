@@ -1,0 +1,39 @@
+@use '../components/'as *;
+
+.skip-link {
+    border: 0;
+    padding: 0;
+    clip-path: inset(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;   
+    overflow: hidden;
+    position: absolute;
+
+    &:focus, &.visible {
+        // top: -1.5rem;
+        top: .35rem;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: fit-content;
+        padding: .1rem .5rem;
+        margin: auto;
+        overflow: auto;
+        clip-path: auto;
+        border-radius: .25rem;
+        background: color(secondary, lighter);
+        color: color(dark);
+        outline: none;
+    }
+
+    &--main {
+        &:focus, &.visible {
+            position: fixed;
+            top: .5rem;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+    }
+}

@@ -1,0 +1,193 @@
+@use '../components/' as *;
+
+.lightbox {
+
+    &__background {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        background-color: color(light);
+    }
+
+    &__body {
+        position: fixed;
+        top: 50%;
+        margin-bottom: -50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: 75vw;
+        height: 75vw;
+
+        @media all and (min-width: 972px) {
+            width: 70vw;
+            height: 70vw;
+        }
+        
+        @media all and (min-width: 1024px) {
+            top: 2rem;
+            margin-bottom: auto;
+            transform: translate(-50%, 0);
+            width: 90vh;
+            height: 90vh;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: -1rem;
+        right: -2.25rem;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        transform: scale(.75);
+
+        @media all and (min-width: 1024px) {
+            top: 1rem;
+            right: -4rem;
+            transform: scale(1.5);
+        }
+
+        &::before, &::after {
+            position: absolute;
+            display: block;
+            left: 1rem;
+            content: "";
+            height: 2rem;
+            width: 3px;
+            background-color: color(primary);
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+
+        &:focus {
+            outline: none;
+
+            &::before, &::after {
+                background: color(secondary);
+            }
+        }
+    }
+
+    &__forward, &__backward {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        cursor: pointer;
+
+        &::before, &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            height: 1rem;
+            width: .22rem;
+            background-color: color(primary);
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            top: .58rem;
+        }
+
+        &:focus {
+            outline: none;
+
+            &::before, &::after {
+                background: color(secondary);
+            }
+        }
+    }
+
+    &__forward {
+        right: -1.25rem;
+        top: .6rem;
+        transform: rotate(180deg);
+        margin-top: calc(calc(75vw - 3.5rem) / 2);
+
+        @media all and (min-width: 1024px) {
+            right: -2.8rem;
+            top: 1.2rem;
+            transform: rotate(180deg) scale(2);
+            margin-top: calc(calc(90vh - 2.25rem) / 2); //!
+        }
+    }
+
+    &__backward {
+        left: -1.25rem;
+        margin-top: calc(calc(75vw - 3.5rem) / 2);
+
+        @media all and (min-width: 1024px) {
+            left: -2.8rem;
+            transform: scale(2);
+            margin-top: calc(calc(90vh - 2.25rem) / 2); //!
+        }
+    }
+
+    &__content {
+        position: fixed;
+        top: 50%;
+        margin-bottom: -50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+
+        @media all and (min-width: 1024px) {
+            top: auto;
+            margin-bottom: auto;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    &__media {
+        width: 75vw;
+        height: 75vw;
+        object-fit: cover;
+        object-position: center;
+        border-radius: .25rem;
+
+        @media all and (min-width: 972px) {
+            width: 70vw;
+            height: 70vw;
+        }
+
+        @media all and (min-width: 1024px) {
+            width: 90vh;
+            height: 90vh;    
+        }
+
+        &-container {
+            width: 75vw;
+            height: 75vw;
+
+            @media all and (min-width: 972px) {
+                width: 70vw;
+                height: 70vw;
+            }
+
+            @media all and (min-width: 1024px) {
+                width: 90vh;
+                height: 90vh;    
+            }
+        }
+
+        &-title {
+            color: color(primary);
+            font-size: 1.25rem;
+            font-weight: 100;
+            margin-top: .25rem;
+        }
+    }
+}

@@ -1,4 +1,9 @@
-@import "./vars";
+@use "utils/variables";
+@use "utils/mixins";
+@use "utils/functions";
 
-@import "./style";
-@import "./photographer";
+@use "base/reset";
+@use "base/typography";
+
+@use "pages/home";
+@use "pages/photographer";

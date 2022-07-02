@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Charset & Title -->
+        <meta charset="UTF-8" />
+        <title id="js-page-title">FishEye — Name</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- FontAwesome -->
+        <script
+            src="https://kit.fontawesome.com/97fdc17419.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Style & Icons -->
+        <link rel="stylesheet" href="../css/index.css" />
+        <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+        <!-- SEO -->
+        <link rel="canonical" href="#" />
+        <meta name="author" content="Annaelle Emery" />
+        <meta
+            name="description"
+            content="Les meilleurs photographes freelances exposent leurs travaux sur FishEye !"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="theme-color" content="#901c1c" />
+    </head>
+
+    <body>
+        <header>
+            <a href="../" aria-label="FishEye Homepage" class="logo">
+                <img src="../assets/images/logo.png" alt="FishEye's Logo" />
+            </a>
+        </header>
+
+        <section class="photographer-section">
+            <div class="photographer-header">
+                <div id="photographer-header__info">
+                    <h1
+                        tabindex="0"
+                        class="photographer-header__title"
+                        id="js-photographer-name"
+                    >
+                        Name
+                    </h1>
+
+                    <div class="photographer-header__text" tabindex="0">
+                        <p
+                            class="photographer-header__location"
+                            id="js-photographer-location"
+                        >
+                            Location
+                        </p>
+                        <p
+                            class="photographer-header__description"
+                            id="js-photographer-tagline"
+                        >
+                            Tagline
+                        </p>
+                    </div>
+                </div>
+
+                <div class="photographer-header__contact">
+                    <button
+                        class="photographer-header__contact-button"
+                        id="contact-button"
+                    >
+                        Contactez-moi
+                    </button>
+                </div>
+
+                <div
+                    class="photographer-header__picture-container"
+                    id="js-photographer-portrait"
+                >
+                    <img
+                        src=""
+                        alt=""
+                        class="photographer-header__picture"
+                        tabindex="0"
+                    />
+                </div>
+
+                <div class="photographer-header__inserts" tabindex="0">
+                    <p
+                        class="photographer-header__likes"
+                        id="js-photographer-likes"
+                    >
+                        Likes
+                    </p>
+                    <p
+                        class="photographer-header__price"
+                        id="js-photographer-pricing"
+                    >
+                        Price
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="contact-form__background" id="contact-form__background">
+            <section class="contact-form__body">
+                <span
+                    class="contact-form__close close-button"
+                    tabindex="0"
+                    aria-role="button"
+                    aria-label="close"
+                ></span>
+
+                <div class="contact-form__content" id="contact-form-content">
+                    <h2 id="js-contact-title">Contactez-moi</h2>
+
+                    <form name="contact" action="index.html" id="contactForm">
+                        <div class="contact-form__input">
+                            <label
+                                for="contact-form__first-name"
+                                class="contact-form__text-label"
+                                >Prénom</label
+                            >
+                            <input
+                                type="text"
+                                id="contact-form__first-name"
+                                name="firstName"
+                                minlength="2"
+                                required
+                                class="contact-form__text-input"
+                            />
+                        </div>
+
+                        <div class="contact-form__input">
+                            <label
+                                for="contact-form__last-name"
+                                class="contact-form__text-label"
+                                >Nom</label
+                            >
+                            <input
+                                type="text"
+                                id="contact-form__last-name"
+                                name="lastName"
+                                minlength="2"
+                                required
+                                class="contact-form__text-input"
+                            />
+                        </div>
+
+                        <div class="contact-form__input">
+                            <label
+                                for="contact-form__email"
+                                class="contact-form__text-label"
+                                >Email</label
+                            >
+                            <input
+                                type="email"
+                                id="contact-form__email"
+                                name="email"
+                                required
+                                class="contact-form__text-input"
+                            />
+                        </div>
+
+                        <div class="contact-form__input">
+                            <label
+                                for="contact-form__message"
+                                class="contact-form__text-label"
+                                >Votre message</label
+                            >
+                            <p
+                                id="character-counter"
+                                class="contact-form__character-counter"
+                            >
+                                Caractères requis: 20
+                            </p>
+                            <textarea
+                                id="contact-form__message"
+                                name="message"
+                                required
+                                class="contact-form__text-input"
+                            ></textarea>
+                        </div>
+
+                        <button
+                            class="contact-form__submit-button"
+                            id="contact-form__submit-button"
+                            form="contactForm"
+                            type="button"
+                            value="Envoyer"
+                        >
+                            Envoyer
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <div class="sort-menu" id="main">
+            <label for="sorting-menu" class="sort-menu__text" tabindex="0"
+                >Trier par</label
+            >
+
+            <select
+                name="sorting-menu"
+                id="sorting-menu"
+                class="sort-menu__dropdown"
+            >
+                <option value="popularity" class="sort-menu__item">
+                    Popularité
+                </option>
+                <option value="date" class="sort-menu__item">Date</option>
+                <option value="title" class="sort-menu__item">Titre</option>
+            </select>
+        </div>
+
+        <main class="portfolio">
+            <div class="lightbox__background" id="lightbox__background">
+                <section class="lightbox__body">
+                    <div class="lightbox__controls">
+                        <span
+                            class="lightbox__close close-button"
+                            tabindex="0"
+                            aria-role="button"
+                            aria-label="close"
+                        ></span>
+                        <span
+                            class="lightbox__forward"
+                            tabindex="0"
+                            aria-role="button"
+                            aria-label="forward"
+                        ></span>
+                        <span
+                            class="lightbox__backward"
+                            tabindex="0"
+                            aria-role="button"
+                            aria-label="backward"
+                        ></span>
+                    </div>
+
+                    <figure class="lightbox__content">
+                        <div
+                            src=""
+                            alt=""
+                            class="lightbox__media-container"
+                        ></div>
+
+                        <figcaption>
+                            <h2 class="lightbox__media-title">Title</h2>
+                        </figcaption>
+                    </figure>
+                </section>
+            </div>
+        </main>
+
+        <!-- Javascript -->
+        <script type="module" src="../scripts/index.js"></script>
+    </body>
+</html>

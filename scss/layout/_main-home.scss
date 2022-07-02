@@ -1,0 +1,81 @@
+@use '../layout/' as *;
+
+main {
+    @include area-padding;
+
+    .home {
+        &-title {
+            color: color(primary);
+            font-size: 1rem;
+            font-weight: 100;
+            position: absolute;
+            right: 1rem;
+            top: 2rem;
+    
+            @media all and (min-width: 666px) {
+                font-size: 1.5rem;
+                top: 2.5rem;
+                right: 1.5rem;
+            }
+    
+            @media all and (min-width: 1024px) {
+                font-size: 2rem;
+                top: 2.75rem;
+                right: 4rem;
+            }
+        }
+
+        &-photographer {
+            margin-bottom: 2rem;
+            text-align: center;
+        
+            &__picture {
+                width: 60vw;
+                height: 60vw;
+                object-position: center;
+                object-fit: cover;
+                display: block;
+                overflow: hidden;
+                border-radius: 50%;
+                margin-left: auto;
+                margin-right: auto;
+        
+                @media all and (min-width: 800px) {
+                    width: 20vw;
+                    height: 20vw;
+                }
+            }
+        
+            &__name {
+                color: color(secondary);
+                margin-top: 2rem;
+                font-weight: 100;
+                font-size: 2rem;
+            }
+        
+            &__location {
+                color: color(primary);
+            }
+        
+            &__description {
+                font-size: .75rem;
+            }
+        
+            &__pricing {
+                font-size: .75rem;
+                color: lighten(color(dark), 46);
+            }
+        
+            @media all and (min-width: 800px) {
+                width: 30vw;
+            }
+        }
+    }
+
+    @media all and (min-width: 800px) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+}

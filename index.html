@@ -1,27 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
-        <link href="css/index.css" rel="stylesheet" type="text/css" />
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/png" href="assets/favicon.png" />
+        <!-- Charset & Title -->
+        <meta charset="UTF-8" />
+        <title>FishEye — Nos Photographes</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
             rel="stylesheet"
         />
-        <title>Fisheye</title>
+
+        <!-- FontAwesome -->
+        <script
+            src="https://kit.fontawesome.com/97fdc17419.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Style & Icons -->
+        <link href="css/index.css" rel="stylesheet" type="text/css" />
+
+        <!-- Javascript -->
+        <script type="module" src="../scripts/index.js"></script>
+
+        <!-- SEO -->
+        <link rel="canonical" href="#" />
+        <meta name="author" content="Annaelle Emery" />
+        <meta
+            name="description"
+            content="FishEye est le quatrième projet de la formation Développeur Front-End de OpenClassrooms: créez un site accessible pour une plateforme de photographes."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="theme-color" content="#901c1c" />
     </head>
+
     <body>
         <header>
-            <img src="assets/images/logo.png" class="logo" />
-            <h1>Nos photographes</h1>
+            <a href="/" aria-label="FishEye Homepage" class="logo">
+                <img src="../assets/images/logo.png" alt="FishEye's Logo" />
+            </a>
         </header>
 
         <main id="main">
-            <div class="photographer_section"></div>
+            <h1 tabindex="0" class="home-title">Nos photographes</h1>
         </main>
-
-        <script src="scripts/factories/Photographer.js"></script>
-        <script src="scripts/pages/index.js"></script>
-        <script src="scripts/pages/photographer.js"></script>
     </body>
 </html>

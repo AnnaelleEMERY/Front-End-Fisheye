@@ -1,0 +1,115 @@
+@use "../layout" as *;
+
+.portfolio {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+
+    @media (max-width: 1034px) {
+        margin-top: 4rem;
+    }
+
+    &__element {
+        position: relative;
+        top: -3rem;
+        padding-bottom: 1rem;
+
+        &-media {
+            width: calc(100vw - 2rem);
+            height: 12.5rem;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 0.5rem;
+            cursor: pointer;
+
+            @media all and (min-width: 682px) {
+                width: calc(100vw - 3rem);
+            }
+
+            @media all and (min-width: 800px) {
+                width: 28.5vw;
+                height: 28.5vw;
+            }
+
+            &--video {
+                &::after,
+                &::before {
+                    position: absolute;
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 700;
+                    content: "\f04b";
+                }
+
+                &::before {
+                    top: 0.7rem;
+                    left: 0.8rem;
+                    opacity: 0.5;
+                    color: color(secondary);
+                    font-size: 3rem;
+                }
+
+                &::after {
+                    top: 1rem;
+                    left: 1rem;
+                    opacity: 0.5;
+                    color: color(primary);
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        &-metadata {
+            display: flex;
+            justify-content: space-between;
+            color: color(primary);
+            padding-top: 0.25rem;
+
+            @media all and (min-width: 682px) {
+                width: calc(100vw - 3rem);
+            }
+
+            @media all and (min-width: 800px) {
+                width: 28.5vw;
+            }
+        }
+
+        &-title {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        &-likes {
+            margin-left: 0.5rem;
+            padding: 0 0.25rem;
+            cursor: pointer;
+            white-space: nowrap;
+
+            &::after {
+                margin-left: 0.5rem;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 700;
+                content: "\f004";
+            }
+
+            &.liked {
+                border-radius: 0.25rem;
+                animation: fadein 10s ease-in-out;
+                @keyframes fadein {
+                    0% {
+                        background: rgba(color(secondary, lighter), 0);
+                    }
+                    2% {
+                        background: rgba(color(secondary, lighter), 0.5);
+                    }
+                    98% {
+                        background: rgba(color(secondary, lighter), 0.5);
+                    }
+                    100% {
+                        background: rgba(color(secondary, lighter), 0);
+                    }
+                }
+            }
+        }
+    }
+}

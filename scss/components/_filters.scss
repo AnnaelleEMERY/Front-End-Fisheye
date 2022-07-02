@@ -1,0 +1,7 @@
+@use "../components/" as *;
+
+@media all and (min-width: 1180px) {
+    .top-nav {
+        margin-top: -1.75rem;
+    }
+}

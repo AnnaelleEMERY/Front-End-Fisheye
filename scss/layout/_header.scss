@@ -1,0 +1,27 @@
+@use "../layout/" as *;
+
+header {
+    @include area-padding;
+
+    .logo {
+        margin-bottom: 1.5rem;
+        width: 13rem;
+
+        > img {
+            max-width: 100%;
+            margin: 0 1px;
+        }
+
+        @media all and (min-width: 1024px) {
+            margin-right: 2rem;
+            margin-left: 2rem;
+        }
+    }
+
+    @media all and (min-width: 1180px) {
+        max-width: 70vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
