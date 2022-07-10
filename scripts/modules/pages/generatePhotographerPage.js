@@ -9,10 +9,7 @@ function generatePhotographerPage(photographers) {
 
     let photographerIndex = undefined;
     for (let i = 0; i < photographers.length; i += 1) {
-        if (
-            encodeURIComponent(photographers[i].name.replace(/\s|-/g, "")) ===
-            photographerQuery
-        ) {
+        if (encodeURIComponent(photographers[i].id) === photographerQuery) {
             photographerIndex = i;
         }
     }

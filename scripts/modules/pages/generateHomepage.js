@@ -5,12 +5,10 @@ function generateHomepage(photographers) {
 
     // generate the homepage photographer by photographer
     for (let i = 0; i < photographers.length; i += 1) {
-        let photographerFilters = "";
-
         // generate the main part of the photographer header
         let photographerMain = `<a href="photographer/index.html?p=${encodeURIComponent(
-            photographers[i].name.replace(/\s|-/g, "")
-        )}" aria-label="${photographers[i].name}">
+            photographers[i].id
+        )}" aria-label="${photographers[i].id}">
                                     <figure>
                                         <img src="${
                                             photographers[i].portrait
