@@ -19,7 +19,7 @@ function updatePortfolio(modalBasics, contactModal, sorter, likesButtons) {
         sorter.value
     ));
 
-    //lightbox modal open
+    // lightbox modal open
     modalBasics.lightbox.openButtons.forEach((btn) => {
         btn.addEventListener("click", () => {
             openModal(modalBasics.lightbox.background);
