@@ -19,16 +19,11 @@
         &__dropdown {
             background-color: color(primary);
             color: color(light);
-            padding: 0.5rem;
+            padding: 0.75rem 0.5rem;
             border-radius: 0.5rem;
             font-size: 1rem;
             width: 7.25rem;
             cursor: pointer;
-
-            &:focus {
-                background-color: color(secondary, lighter);
-                color: color(dark);
-            }
         }
     }
 }

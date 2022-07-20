@@ -40,7 +40,7 @@ function generatePhotographerPage(photographers) {
     // generate the photographer portfolio media by media
     let photographerPortfolio = "";
     for (let i = 0; i < photographer.media.length; i += 1) {
-        let mediaElement = `<img src="${photographer.media[i].path}" alt="${photographer.media[i].alt}" class="portfolio__element-media" tabindex="0">`;
+        let mediaElement = `<img aria-label="image cliquable ${photographer.media[i].alt}" src="${photographer.media[i].path}" alt="${photographer.media[i].alt}" class="portfolio__element-media" tabindex="0">`;
 
         if (photographer.media[i] instanceof Video) {
             mediaElement = `<video src="${photographer.media[i].path}" alt="${photographer.media[i].alt}" class="portfolio__element-media" tabindex="0"></video>
@@ -52,7 +52,7 @@ function generatePhotographerPage(photographers) {
 
                                     <figcaption class="portfolio__element-metadata">
                                         <p class="portfolio__element-title" tabindex="0">${photographer.media[i].title}</p>
-                                        <p class="portfolio__element-likes" aria-label="likes" tabindex="0">${photographer.media[i].likes}</p>
+                                        <p class="portfolio__element-likes" tabindex="0" aria-label="likes">${photographer.media[i].likes}</p>
                                         <p class="portfolio__element-date screenreader-only" aria-hidden="true">${photographer.media[i].date}</p>
                                     </figcaption>
                                 </figure>`;
